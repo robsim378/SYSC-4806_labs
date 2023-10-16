@@ -10,6 +10,11 @@ public class AddressBookRestController {
     @Autowired
     AddressBookRepository repository;
 
+    @GetMapping("/")
+    public Iterable<AddressBook> getDefaultPage() {
+        return repository.findAll();
+    }
+
     @GetMapping("/getAddressBooks")
     public Iterable<AddressBook> getAddressBooks() {
         return repository.findAll();
