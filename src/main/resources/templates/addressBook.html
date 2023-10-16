@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SYSC 4806 lab 4</title>
+</head>
+<body>
+    <p th:text="|Buddies:|" />
+    <th:block th:each="buddy : ${buddies}">
+        <div><span th:text="${buddy}"/></div>
+    </th:block>
+</body>
+</html>
